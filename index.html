@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saúde e Bem Estar - Serviços de Higienização de Estofados em Angola</title>
+    <!-- Carregando o Tailwind diretamente da CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Estilos adicionais para garantir a aparência */
+        .hero-pattern {
+            background-color: #f0f9ff;
+            background-image: radial-gradient(#0284c7 0.5px, transparent 0.5px), radial-gradient(#0284c7 0.5px, #f0f9ff 0.5px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+        }
+        
+        /* Estilos básicos para garantir a formatação mesmo se o Tailwind falhar */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #1a202c;
+            line-height: 1.5;
+        }
+        
+        .container {
+            width: 100%;
+            padding-right: 1rem;
+            padding-left: 1rem;
+            margin-right: auto;
+            margin-left: auto;
+            max-width: 1280px;
+        }
+        
+        .saude-green {
+            color: #059669;
+        }
+        
+        .saude-blue {
+            color: #2563eb;
+        }
+
+        /* Cor azul customizada */
+        .custom-blue {
+            color: #5ca2e4;
+        }
+
+        .custom-blue-bg {
+            background-color: #5ca2e4;
+        }
+        
+        /* Estilos para a logo */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        .logo-image {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(92, 162, 228, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .logo-image:hover {
+            box-shadow: 0 4px 12px rgba(92, 162, 228, 0.4);
+            transform: scale(1.05);
+        }
+
+        /* Para dispositivos móveis */
+        @media (max-width: 768px) {
+            .logo-image {
+                height: 35px;
+            }
+        }
+        
+        .btn-primary {
+            background-color: #5ca2e4;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            display: inline-block;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #4a91d1;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(92, 162, 228, 0.4);
+        }
+        
+        .btn-outline {
+            border: 2px solid #5ca2e4;
+            color: #5ca2e4;
+            background-color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            display: inline-block;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline:hover {
+            background-color: #5ca2e4;
+            color: white;
+        }
+
+        /* Animações suaves */
+        .fade-in {
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .pulse-green {
+            animation: pulse-green 2s infinite;
+        }
+
+        @keyframes pulse-green {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(5, 150, 105, 0); }
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800">
+    <!-- Barra de navegação -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="logo-container">
+                    <img src="Logo.jpg" alt="Saúde e Bem Estar - Serviço de limpeza de estofados" class="logo-image text-2xl mr-2"/>
+                </div>
+                <span class="text-3xl font-bold"><span class="saude-green">Saúde e</span> <span class="saude-blue">Bem Estar</span></span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#inicio" class="hover:text-green-600 transition">Início</a>
+                <a href="#servicos" class="hover:text-green-600 transition">Serviços</a>
+                <a href="#porque-nos" class="hover:text-green-600 transition">Porquê Nós</a>
+                <a href="#depoimentos" class="hover:text-green-600 transition">Depoimentos</a>
+                <a href="#contacto" class="hover:text-green-600 transition">Contacto</a>
+            </div>
+            <div class="md:hidden">
+                <button class="text-gray-500 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção Hero -->
+    <section id="inicio" class="hero-pattern pt-24 pb-16 md:pt-32 md:pb-24">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 fade-in">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Higienização profissional para <span class="saude-green">sua saúde</span> e <span class="saude-blue">bem-estar</span></h1>
+                    <p class="text-lg md:text-xl mb-6">A Saúde e Bem Estar é especializada em devolver a vida e o frescor aos seus móveis estofados, promovendo um ambiente mais saudável para sua família.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contacto" class="btn-primary">Agendar Serviço</a>
+                        <a href="#servicos" class="btn-outline">Ver Serviços</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="Logo.jpg" alt="Serviço de limpeza de estofados" class="rounded-lg shadow-xl"/>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Nossos Serviços</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Oferecemos soluções completas para higienização de todos os tipos de estofados, priorizando sempre sua saúde e bem-estar.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Serviço 1 -->
+                <div class="bg-green-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-couch text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Sofás e Poltronas</h3>
+                    <p class="text-gray-600">Higienização profunda que remove manchas, ácaros e bactérias, devolvendo o aspecto original aos seus móveis e promovendo um ambiente mais saudável.</p>
+                </div>
+                <!-- Serviço 2 -->
+                <div class="bg-blue-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-car text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Interiores de Veículos</h3>
+                    <p class="text-gray-600">Limpeza especializada para bancos, tetos e carpetes de automóveis, eliminando odores e criando um ambiente mais saudável no seu veículo.</p>
+                </div>
+                <!-- Serviço 3 -->
+                <div class="bg-purple-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-purple-600 mb-4">
+                        <i class="fas fa-bed text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Colchões e Cadeiras</h3>
+                    <p class="text-gray-600">Tratamento anti-ácaro e anti-fungos para colchões, travesseiros e cadeiras, essencial para sua saúde e qualidade do sono.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Porquê Escolher-nos -->
+    <section id="porque-nos" class="py-16 bg-blue-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Porquê Escolher a Saúde e Bem Estar?</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Comprometidos com a excelência e sua saúde em toda Angola.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <!-- Vantagem 1 -->
+                <div class="text-center">
+                    <div class="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
+                        <i class="fas fa-shield-alt text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Produtos Certificados</h3>
+                    <p class="text-gray-600">Utilizamos apenas produtos de alta qualidade, seguros para a saúde e ecologicamente responsáveis.</p>
+                </div>
+                <!-- Vantagem 2 -->
+                <div class="text-center">
+                    <div class="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
+                        <i class="fas fa-user-md text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Equipe Especializada</h3>
+                    <p class="text-gray-600">Técnicos treinados em saúde ambiental e com experiência no mercado angolano.</p>
+                </div>
+                <!-- Vantagem 3 -->
+                <div class="text-center">
+                    <div class="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
+                        <i class="fas fa-clock text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Pontualidade</h3>
+                    <p class="text-gray-600">Respeitamos o seu tempo com agendamentos precisos e sem atrasos.</p>
+                </div>
+                <!-- Vantagem 4 -->
+                <div class="text-center">
+                    <div class="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
+                        <i class="fas fa-heart text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Foco na Saúde</h3>
+                    <p class="text-gray-600">Nosso trabalho contribui diretamente para sua saúde e bem-estar familiar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Processo de Trabalho -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Como Trabalhamos</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Um processo simplificado focado na sua saúde e satisfação.</p>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <!-- Etapa 1 -->
+                <div class="flex flex-col items-center mb-8 md:mb-0 max-w-xs">
+                    <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">1</div>
+                    <h3 class="text-xl font-bold mb-2 text-center">Agendamento</h3>
+                    <p class="text-gray-600 text-center">Entre em contacto e agende o serviço no dia e horário que for melhor para você.</p>
+                </div>
+                
+                <div class="hidden md:block">
+                    <i class="fas fa-arrow-right text-green-300 text-3xl"></i>
+                </div>
+                
+                <!-- Etapa 2 -->
+                <div class="flex flex-col items-center mb-8 md:mb-0 max-w-xs">
+                    <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">2</div>
+                    <h3 class="text-xl font-bold mb-2 text-center">Avaliação</h3>
+                    <p class="text-gray-600 text-center">Nossos técnicos avaliam o tipo de estofado e o tratamento mais adequado para sua saúde.</p>
+                </div>
+                
+                <div class="hidden md:block">
+                    <i class="fas fa-arrow-right text-green-300 text-3xl"></i>
+                </div>
+                
+                <!-- Etapa 3 -->
+                <div class="flex flex-col items-center mb-8 md:mb-0 max-w-xs">
+                    <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">3</div>
+                    <h3 class="text-xl font-bold mb-2 text-center">Higienização</h3>
+                    <p class="text-gray-600 text-center">Realizamos o processo completo com equipamentos modernos e produtos específicos para saúde.</p>
+                </div>
+                
+                <div class="hidden md:block">
+                    <i class="fas fa-arrow-right text-green-300 text-3xl"></i>
+                </div>
+                
+                <!-- Etapa 4 -->
+                <div class="flex flex-col items-center max-w-xs">
+                    <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">4</div>
+                    <h3 class="text-xl font-bold mb-2 text-center">Entrega</h3>
+                    <p class="text-gray-600 text-center">Devolvemos seus estofados completamente higienizados, saudáveis e renovados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section id="depoimentos" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">O Que Dizem Nossos Clientes</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">A satisfação e saúde dos nossos clientes em Luanda e outras províncias é a nossa maior conquista.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Depoimento 1 -->
+                <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Meu filho tinha alergias constantes. Após a higienização da Saúde e Bem Estar, as crises diminuíram muito! Serviço excelente!"</p>
+                    <div class="font-bold">Maria José, Luanda</div>
+                </div>
+                <!-- Depoimento 2 -->
+                <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Profissionais que realmente se preocupam com a saúde. Eliminaram completamente os odores do meu carro. Recomendo!"</p>
+                    <div class="font-bold">João Paulo, Benguela</div>
+                </div>
+                <!-- Depoimento 3 -->
+                <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"A qualidade do ar melhorou muito após a higienização dos colchões. Agora durmo melhor e acordo mais disposta!"</p>
+                    <div class="font-bold">Ana Clara, Huambo</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Entre em Contacto</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Estamos prontos para cuidar da sua saúde e bem-estar.</p>
+            </div>
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2">
+                    <form class="bg-blue-50 p-6 rounded-lg shadow" id="contactForm">
+                        <div class="mb-4">
+                            <label class="block text-gray-700 mb-2" for="nome">Nome Completo</label>
+                            <input class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600" type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 mb-2" for="telefone">Telefone</label>
+                            <input class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600" type="tel" id="telefone" name="telefone" placeholder="Seu número de telefone" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 mb-2" for="email">Email</label>
+                            <input class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600" type="email" id="email" name="email" placeholder="Seu email" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 mb-2" for="servico">Serviço Desejado</label>
+                            <select class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600" id="servico" name="servico" required>
+                                <option value="">Selecione um serviço</option>
+                                <option value="sofas">Higienização de Sofás e Poltronas</option>
+                                <option value="veiculos">Limpeza de Interior de Veículos</option>
+                                <option value="colchoes">Higienização de Colchões</option>
+                                <option value="cadeiras">Limpeza de Cadeiras</option>
+                                <option value="outros">Outro Serviço</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-700 mb-2" for="mensagem">Mensagem</label>
+                            <textarea class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 h-32" id="mensagem" name="mensagem" placeholder="Descreva sua necessidade" required></textarea>
+                        </div>
+                        <button type="submit" class="bg-blue-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-lg w-full transition">Enviar Mensagem</button>
+                    </form>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-blue-50 p-6 rounded-lg shadow h-full">
+                        <h3 class="text-xl font-bold mb-4">Informações de Contacto</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="text-blue-600 mr-3">
+                                    <i class="fas fa-map-marker-alt mt-1"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Endereço</h4>
+                                    <p class="text-gray-600">Centralidade do Lossambo, Quadra 31, Prédio 16<br>Huambo, Angola</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="text-blue-600 mr-3">
+                                    <i class="fas fa-phone mt-1"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Telefone</h4>
+                                    <p class="text-gray-600">+244 928 301 450<br>+244 xxx xxx xxx</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="text-blue-600 mr-3">
+                                    <i class="fas fa-envelope mt-1"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Email</h4>
+                                    <p class="text-gray-600">contacto@saudebemestar.co.ao<br>info@saudebemestar.co.ao</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="text-blue-600 mr-3">
+                                    <i class="fas fa-clock mt-1"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Horário de Funcionamento</h4>
+                                    <p class="text-gray-600">Segunda a Sexta: 8h - 18h<br>Sábado: 8h - 13h</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <h4 class="font-bold mb-3">Siga-nos</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://facebook.com/saudebemestar" target="_blank" rel="noopener noreferrer" class="bg-blue-600 hover:bg-blue-700 text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="https://twitter.com/saudebemestar" target="_blank" rel="noopener noreferrer" class="bg-blue-400 hover:bg-blue-500 text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="https://instagram.com/saudebemestar" target="_blank" rel="noopener noreferrer" class="bg-pink-600 hover:bg-pink-700 text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://wa.me/244928301450" target="_blank" rel="noopener noreferrer" class="bg-green-600 hover:bg-green-700 text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="py-12 bg-blue-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Pronto para cuidar da sua saúde?</h2>
+            <p class="text-xl mb-6 max-w-2xl mx-auto">Agende agora mesmo uma avaliação gratuita e promova um ambiente mais saudável para sua família!</p>
+            <a href="#contacto" class="bg-white text-blue-600 hover:bg-gray-100 font-medium py-3 px-8 rounded-lg inline-block transition">Solicitar Orçamento</a>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-6 md:mb-0">
+                    <div class="text-2xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-leaf text-blue-400 mr-2"></i>
+                        Saúde e<span class="text-blue-400">Bem Estar</span>
+                    </div>
+                    <p class="max-w-xs text-gray-400">Sua empresa de confiança para serviços de higienização profissional, cuidando da sua saúde em Angola.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h3 class="text-lg font-bold mb-4">Serviços</h3>
+                        <ul class="space-y-2 text-gray-400">
+                            <li><a href="#servicos" class="hover:text-white transition">Sofás e Poltronas</a></li>
+                            <li><a href="#servicos" class="hover:text-white transition">Interiores de Veículos</a></li>
+                            <li><a href="#servicos" class="hover:text-white transition">Colchões</a></li>
+                            <li><a href="#servicos" class="hover:text-white transition">Cadeiras</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold mb-4">Empresa</h3>
+                        <ul class="space-y-2 text-gray-400">
+                            <li><a href="#" class="hover:text-white transition">Sobre Nós</a></li>
+                            <li><a href="#" class="hover:text-white transition">Nossa Equipe</a></li>
+                            <li><a href="#" class="hover:text-white transition">Parcerias</a></li>
+                            <li><a href="#" class="hover:text-white transition">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold mb-4">Contacto</h3>
+                        <ul class="space-y-2 text-gray-400">
+                            <li><i class="fas fa-phone mr-2"></i>+244 928 301 450</li>
+                            <li><i class="fas fa-envelope mr-2"></i>contacto@saudebemestar.co.ao</li>
+                            <li><i class="fas fa-map-marker-alt mr-2"></i>Huambo, Angola</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Saúde e Bem Estar. Todos os direitos reservados. | Desenvolvido com foco na sua saúde.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Smooth scrolling para links de navegação
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Formulário de contato
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Coleta os dados do formulário
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Simula envio (aqui você adicionaria a lógica real de envio)
+            alert('Obrigado pelo seu interesse! Entraremos em contacto em breve para cuidar da sua saúde e bem-estar.');
+            
+            // Limpa o formulário
+            this.reset();
+        });
+
+        // Menu mobile
+        const mobileMenuButton = document.querySelector('.md\\:hidden button');
+        const mobileMenu = document.createElement('div');
+        mobileMenu.className = 'hidden md:hidden bg-white shadow-lg absolute top-full left-0 right-0 z-20';
+        mobileMenu.innerHTML = `
+            <div class="px-4 py-4 space-y-4">
+                <a href="#inicio" class="block hover:text-green-600 transition">Início</a>
+                <a href="#servicos" class="block hover:text-green-600 transition">Serviços</a>
+                <a href="#porque-nos" class="block hover:text-green-600 transition">Porquê Nós</a>
+                <a href="#depoimentos" class="block hover:text-green-600 transition">Depoimentos</a>
+                <a href="#contacto" class="block hover:text-green-600 transition">Contacto</a>
+            </div>
+        `;
+        
+        document.querySelector('nav').appendChild(mobileMenu);
+        
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Fecha o menu mobile quando clica em um link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Animação de fade-in ao scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observa elementos para animação
+        document.querySelectorAll('.grid > div, .flex > div').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Destaque do link ativo na navegação
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-green-600', 'font-bold');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('text-green-600', 'font-bold');
+                }
+            });
+        });
+
+        // Botão de WhatsApp flutuante
+        const whatsappButton = document.createElement('div');
+        whatsappButton.innerHTML = `
+            <a href="https://wa.me/244928301450?text=Olá! Gostaria de saber mais sobre os serviços de higienização para minha saúde e bem-estar." 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 z-50 pulse-green">
+                <i class="fab fa-whatsapp text-2xl"></i>
+            </a>
+        `;
+        document.body.appendChild(whatsappButton);
+
+        // Contador de visitantes (simulado)
+        function updateVisitorCounter() {
+            const counter = localStorage.getItem('visitorCount') || 0;
+            const newCount = parseInt(counter) + 1;
+            localStorage.setItem('visitorCount', newCount);
+        }
+        updateVisitorCounter();
+    </script>
+</body>
+</html>
