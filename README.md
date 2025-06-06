@@ -47,7 +47,7 @@ saude-bem-estar/
 ├── README.md          # Documentação do projeto
 ├── .gitignore         # Arquivos ignorados pelo Git
 └── static/            # (Opcional) Pasta para recursos adicionais
-    ├── images/        # Imagens adicionais
+    ├── img/        # Imagens adicionais
     ├── css/           # Estilos customizados
     └── js/            # Scripts JavaScript
 ```
@@ -64,7 +64,7 @@ saude-bem-estar/
 1. **Clone o repositório**
 
    ```bash
-   git clone https://github.com/seu-usuario/saude-bem-estar.git
+   git clone https://github.com/Emicy963/saude-bem-estar.git
    cd saude-bem-estar
    ```
 
